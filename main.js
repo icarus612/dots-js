@@ -44,7 +44,7 @@ const translateY = (mv, t, crv) => {
         [
           {
             value: [mv[0], mv[1]],
-            duration: t * 3,
+            duration: t * 3.5,
             easing: "easeInOutCubic",
           },
         ]
@@ -55,7 +55,7 @@ const translateY = (mv, t, crv) => {
         [
           {
             value: [mv[0], mv[1]],
-            duration: t * 3,
+            duration: t * 3.5,
             easing: "easeInOutCubic",
           },
         ]
@@ -66,7 +66,7 @@ const translateY = (mv, t, crv) => {
         [
           {
             value: [mv[0], mv[1]],
-            duration: t * 3,
+            duration: t * 3.5,
             easing: "linear",
           },
         ]
@@ -79,7 +79,7 @@ const translateY = (mv, t, crv) => {
             value: [mv[0], mv[1]],
             duration: t * 1.5,
             easing: "linear",
-            delay: anime.stagger(t / 2, {start: t}),
+            delay: t,
           },
         ]
       )
@@ -108,7 +108,7 @@ const translateY = (mv, t, crv) => {
               value: [mv[0], mv[1]],
               duration: t * 1.5,
               easing: "linear",
-              delay: anime.stagger(t / 2, {start: t}),
+              delay: t,
             },
           ]
       )
@@ -141,7 +141,7 @@ const translateX = (mv, t, crv) => {
         [
           {
             value: [mv[0], mv[1]],
-            duration: t * 3,
+            duration: t * 3.5,
             easing: "easeInOutCubic",
           },
         ]
@@ -152,7 +152,7 @@ const translateX = (mv, t, crv) => {
         [
           {
             value: [mv[0], mv[1]],
-            duration: t * 3,
+            duration: t * 3.5,
             easing: "easeInOutCubic",
           },
         ]
@@ -163,7 +163,7 @@ const translateX = (mv, t, crv) => {
         [
           {
             value: [mv[0], mv[1]],
-            duration: t * 3,
+            duration: t * 3.5,
             easing: "linear",
           },
         ]
@@ -217,7 +217,7 @@ const translateX = (mv, t, crv) => {
             value: [mv[0], mv[1]],
             duration: t * 1.5,
             easing: "linear",
-            delay: anime.stagger(t / 2, {start: t}),
+            delay: t,
           },
         ]
       )
@@ -228,7 +228,6 @@ const translateX = (mv, t, crv) => {
 let fillColor = (e, t, svg) =>{
   for (let i = 0; i < svg.length; i++){
           let svgStart = document.querySelectorAll(svg[i]);
-          console.log(svgStart)
           for (let j = 0; j < svgStart.length; j++){
             svgStart[j].style.fill = e[0];
           }
@@ -276,24 +275,32 @@ let fillColor = (e, t, svg) =>{
   }
 }
 
-let animation = (e, t, svg, mvX, mvY, crv, clr) => {
-  setTimeout(function(){
-    anime({
+let animation = (e, t, svg, mvX, mvY, crv, clr, d) => {
+    let animate = anime.timeline({
+
+    }).add({
         targets: svg.children[e],
         translateX: translateX(mvX, t, crv),
         translateY: translateY(mvY, t, crv),
         fill: fillColor(clr, t, svg),
-        loop: true,
-        duration: t
-    });
-  }, e * t / 2)
+        complete: function(anim){
+          animation(e, t, svg, mvX, mvY, crv, clr, 0)
+        },
+    }, d);
+  
+    return animate
+  
 }
 
 let dotsMovement = (svg, mvX, mvY, t, crv, clr) => {
+  let delay = (el,time, n) =>{
+    return 3.5 * time / el.childNodes.length * n
+  }
   //mobile functions for distance
   let loopThrough = (e) => {
     for (i = 0; i < e.childNodes.length; i++){
-      animation(i, t, e, mvX, mvY, crv, clr)
+      
+      animation(i, t, e, mvX, mvY, crv, clr, delay(e, t,i))
     }
   }
   if (typeof svg.length == 'undefined') {
@@ -303,7 +310,6 @@ let dotsMovement = (svg, mvX, mvY, t, crv, clr) => {
       loopThrough(svg[j])
     }
   }
-
 }
 
 
@@ -312,8 +318,8 @@ let dotsMovement = (svg, mvX, mvY, t, crv, clr) => {
 
 
 
-let dotsLTR = makeSVG("heartBeat", 6, "dot", ["dot-c1", "dot-c2"], 500, 360, ".stage");
-let dotsRTL = makeSVG("heartBeat", 6, "dot2", ["dot-c1", "dot-c2"], 500, 360, ".stage");
-dotsMovement(dotsLTR, [-40, -360], [10, 360], 1000, "linearY", "#F30659");
-dotsMovement(dotsRTL, [-360, -40], [10, 360], 1000, "linearY", "#F30659");
+let dotsLTR = makeSVG("heartBeat", 4, "dot", ["dot-c1", "dot-c2"], 500, 360, ".stage");
+let dotsRTL = makeSVG("heartBeat", 7, "dot2", ["dot-c1", "dot-c2"], 500, 360, ".stage");
+dotsMovement(dotsLTR, [-40, -360], [10, 360], 2300, "cubicX", "#F30659");
+dotsMovement(dotsRTL, [-360, -40], [10, 360], 1000, "cubicX", "#F30659");
 
