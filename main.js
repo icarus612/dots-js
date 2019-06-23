@@ -294,11 +294,11 @@ let animation = (e, t, svg, mvX, mvY, crv, clr, d) => {
 
 let dotsMovement = (svg, mvX, mvY, t, crv, clr) => {
   let delay = (el,time, n) =>{
-    return 3.5 * time / el.childNodes.length * n
+    return 3.5 * time / el.children.length * n
   }
   //mobile functions for distance
   let loopThrough = (e) => {
-    for (i = 0; i < e.childNodes.length; i++){
+    for (i = 0; i < e.children.length; i++){
       
       animation(i, t, e, mvX, mvY, crv, clr, delay(e, t,i))
     }
