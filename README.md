@@ -10,3 +10,6 @@ It does! thats the point. This is a simple function designed with *designers* in
 
 ### see a demo: https://quest.devicarus.com
 or just open the index file.
+
+##### Ooor check out these projects: https://deadalus.devicarus.com
+
