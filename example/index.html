@@ -1,0 +1,74 @@
+    
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dots Workbench</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Open+Sans|Quicksand" rel="stylesheet">
+    <style>
+        #main {
+            height: 100vh;
+        }
+        .h300px{
+            height: 300px;
+        }
+        .dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+        }
+    </style>
+	</head>
+	<body>
+		<article id="main">
+			<div class="pb-5 color-change-bg overflow-hidden">
+				<div class="pb-5 container">
+					<div class="d-flex flex-row align-items-center flex-wrap" id="container">
+						<div class="col-12 h300px">
+							<div id="mv1">
+								<div class="dot"></div>
+								<div class="dot"></div>
+								<div class="dot"></div>
+								<div class="dot"></div>
+								<div class="dot"></div>
+							</div>
+						</div>
+						<div class="col-12 h300px">
+                                <div id="mv2">
+								<div class="dot"></div>
+								<div class="dot"></div>
+								<div class="dot"></div>
+								<div class="dot"></div>
+								<div class="dot"></div>
+							</div>						
+						</div>
+						<div class="col-12 h300px">
+                                <div id="mv3">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>			
+						</div>
+					</div>
+				</div>
+            </div>
+            <script src="../src/anime/lib/anime.min.js"></script>
+            <script src="../src/dots.js"></script>
+			<script>
+			
+
+				let dotsRTL = document.getElementById("mv1");
+				let dotsLTR = document.getElementById("mv2");
+				let dotsLTR2 = document.getElementById("mv3");
+				dotsMovement(dotsRTL, [-6, 360], [-6, 360], 1000, "cubicX", ["#009de4", "#06f3a0", "#f30659"]);
+				dotsMovement(dotsLTR, [-6, 360], [-6, 360], 1000, "linearY", ["#009de4", "#06f3a0", "#f30659"]);
+				dotsMovement(dotsLTR2, [-6, 360], [-6, 360], 1000, "cubicX", ["#009de4", "#06f3a0", "#f30659"]);
+			</script>
+		</article>
+	</body>
+
+</html>

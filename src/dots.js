@@ -1,4 +1,3 @@
-import anime from '../anime/lib/anime.es.js';  
 
 const where = (e) => {
   return (e[1] + e[0])/2 ;
@@ -251,6 +250,7 @@ let animation = (e, t, svg, mvX, mvY, crv, clr, d) => {
         translateX: translateX(mvX, t, crv),
         translateY: translateY(mvY, t, crv),
         fill: fillColor(clr, t, svg),
+        backgroundColor: fillColor(clr, t, svg),
         complete: function(anim){
           animation(e, t, svg, mvX, mvY, crv, clr, 0)
         },
@@ -260,7 +260,7 @@ let animation = (e, t, svg, mvX, mvY, crv, clr, d) => {
   
 }
 
-export let dotsMovement = (svg, mvX, mvY, t, crv, clr) => {
+var dotsMovement = (svg, mvX, mvY, t, crv, clr) => {
   let delay = (el,time, n) =>{
     return 3.5 * time / el.children.length * n
   }
@@ -279,5 +279,3 @@ export let dotsMovement = (svg, mvX, mvY, t, crv, clr) => {
     }
   }
 }
-
-
