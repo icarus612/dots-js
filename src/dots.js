@@ -193,12 +193,12 @@ const translateX = (mv, t, crv) => {
 }
 
 let fillColor = (e, t, svg) =>{
-  for (let i = 0; i < svg.length; i++){
-          let svgStart = document.querySelectorAll(svg[i]);
-          for (let j = 0; j < svgStart.length; j++){
-            svgStart[j].style.fill = e[0];
-          }
-        }
+  let el = svg.children
+  for (let i = 0; i < svg.children.length; i++){
+    el[i].style.fill = e[0];
+    el[i].style.backgroundColor = e[0];
+  }  
+
   switch (typeof e){
 
     case "string":
