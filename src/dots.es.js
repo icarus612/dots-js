@@ -240,7 +240,11 @@ let animation = (e, t, svg, mvX, mvY, crv, clr, d) => {
         fill: fillColor(clr, t, svg),
         backgroundColor: fillColor(clr, t, svg),
         complete: function(anim){
-          animation(e, t, svg, mvX, mvY, crv, clr, 0)
+          try {
+            animation(e, t, svg, mvX, mvY, crv, clr, 0)
+          } catch (err) {
+            console.error(err)
+          }
         },
     }, d);
   
