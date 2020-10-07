@@ -217,7 +217,6 @@ let fillColor = (e, t, svg) =>{
 }
 
 const whereTarget = (po, el) => {
-  console.log(po, el)
   let start = document.querySelector(po).getBoundingClientRect()
   let element = el.getBoundingClientRect()
   let x = ((start.left + start.right)/2 - (element.left + element.right)/2);
