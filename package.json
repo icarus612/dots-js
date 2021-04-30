@@ -1,0 +1,26 @@
+{
+  "name": "dots-anime-js",
+  "version": "1.0.0",
+  "description": "Feel free to use it and change it how you like - Dots operates under MIT licence.",
+  "main": "dots.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icarus612/dots-anime-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icarus612/dots-anime-JS/issues"
+  },
+  "homepage": "https://github.com/icarus612/dots-anime-JS#readme"
+}
