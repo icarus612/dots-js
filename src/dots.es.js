@@ -1,7 +1,7 @@
-import anime from 'animejs';  
-  
+import anime from 'animejs';
+
 const where = (e) => {
-  return (e[1] + e[0])/2 ;
+  return (e[1] + e[0]) / 2;
 }
 
 const translateY = (mv, t, crv) => {
@@ -71,32 +71,32 @@ const translateY = (mv, t, crv) => {
       break;
     case "linearY":
       return (
-          [
-            {
-              value: [mv[0], mv[1]],
-              duration: t * 1.5,
-              easing: "linear",
-              delay: t,
-            },
-          ]
+        [
+          {
+            value: [mv[0], mv[1]],
+            duration: t * 1.5,
+            easing: "linear",
+            delay: t,
+          },
+        ]
       )
       break;
 
     default:
       return (
-          [
-              {
-                  value: [mv[0], where(mv)],
-                  duration: t,
-                  easing: "linear",
-              },
-              {
-                  value: [where(mv), mv[1]],
-                  duration: t,
-                  delay: t * 1.5,
-                  easing: "linear",
-              },
-          ]
+        [
+          {
+            value: [mv[0], where(mv)],
+            duration: t,
+            easing: "linear",
+          },
+          {
+            value: [where(mv), mv[1]],
+            duration: t,
+            delay: t * 1.5,
+            easing: "linear",
+          },
+        ]
       )
       break;
   }
@@ -144,7 +144,7 @@ const translateX = (mv, t, crv) => {
             value: [mv[0], mv[1]],
             duration: t * 1.5,
             easing: "linear",
-            delay: anime.stagger(t / 2, {start: t}),
+            delay: anime.stagger(t / 2, { start: t }),
           },
         ]
       )
@@ -156,28 +156,28 @@ const translateX = (mv, t, crv) => {
             value: [mv[0], mv[1]],
             duration: t * 1.5,
             easing: "linear",
-            delay: anime.stagger(t / 2, {start: t}),
+            delay: anime.stagger(t / 2, { start: t }),
           },
         ]
       )
       break;
     case "linearY":
-        return (
-            [
-                {
-                    value: [mv[0], where(mv)],
-                    duration: t,
-                    easing: "linear",
-                },
-                {
-                    value: [where(mv), mv[1]],
-                    duration: t,
-                    delay: t * 1.5,
-                    easing: "linear",
-                },
-            ]
-        )
-        break;
+      return (
+        [
+          {
+            value: [mv[0], where(mv)],
+            duration: t,
+            easing: "linear",
+          },
+          {
+            value: [where(mv), mv[1]],
+            duration: t,
+            delay: t * 1.5,
+            easing: "linear",
+          },
+        ]
+      )
+      break;
     default:
       return (
         [
@@ -193,72 +193,72 @@ const translateX = (mv, t, crv) => {
   }
 }
 
-let fillColor = (e, t, svg) =>{
+let fillColor = (e, t, svg) => {
   let el = svg.children
-  for (let i = 0; i < svg.children.length; i++){
+  for (let i = 0; i < svg.children.length; i++) {
     el[i].style.fill = e[0];
     el[i].style.backgroundColor = e[0];
-  }  
-     
-      let obj = [
-          {
-              value: e[0],
-              duration: (t * 1.5)/e.length,
-              easing: "linear",
-              delay: anime.stagger(t / 2)
-          },
-      ]
+  }
 
-      for (let i = 1; i < e.length; i++){
-          obj.push({
-              value: e[i],
-              duration: (t * 1.5)/e.length,
-              easing: "linear",
-              delay: t / e.length
-          });
-      }
-      return obj;
-        
-  
+  let obj = [
+    {
+      value: e[0],
+      duration: (t * 1.5) / e.length,
+      easing: "linear",
+      delay: anime.stagger(t / 2)
+    },
+  ]
+
+  for (let i = 1; i < e.length; i++) {
+    obj.push({
+      value: e[i],
+      duration: (t * 1.5) / e.length,
+      easing: "linear",
+      delay: t / e.length
+    });
+  }
+  return obj;
+
+
 }
 let whereTarget = (po, el) => {
   let start = document.querySelector(po).getBoundingClientRect()
   let element = el.getBoundingClientRect()
-  let x = ((start.left + start.right)/2 - (element.left+element.right)/2);
-  let y = ((start.top + start.bottom)/2 - (element.top+element.bottom)/2);
+  let x = ((start.left + start.right) / 2 - (element.left + element.right) / 2);
+  let y = ((start.top + start.bottom) / 2 - (element.top + element.bottom) / 2);
   return [x, y]
 }
 let animation = (e, t, svg, mvX, mvY, crv, clr, d) => {
 
-    let animate = anime.timeline({
+  let animate = anime.timeline({
 
-    }).add({
-        targets: svg.children[e],         
-        translateX: translateX(mvX, t, crv),
-        translateY: translateY(mvY, t, crv),
-        fill: fillColor(clr, t, svg),
-        backgroundColor: fillColor(clr, t, svg),
-        complete: function(anim){
-          try {
-            animation(e, t, svg, mvX, mvY, crv, clr, 0)
-          } catch (err) {
-            console.error(err)
-          }
-        },
-    }, d);
-  
-    return animate
-  
+  }).add({
+    targets: svg.children[e],
+    translateX: translateX(mvX, t, crv),
+    translateY: translateY(mvY, t, crv),
+    fill: fillColor(clr, t, svg),
+    backgroundColor: fillColor(clr, t, svg),
+    complete: function (anim) {
+      try {
+        animate.reset()
+        animation(e, t, svg, mvX, mvY, crv, clr, 0)
+      } catch (err) {
+        console.error(err)
+      }
+    },
+  }, d);
+
+  return animate
+
 }
 
 export let dotsMovement = (params) => {
-  let delay = (el, time, n) =>{
+  let delay = (el, time, n) => {
     return 3.5 * time / el.children.length * n
   }
   //mobile functions for distance
   let loopThrough = (e) => {
-    console.log(typeof params.start)
-    for (let i = 0; i < e.children.length; i++){
+    for (let i = 0; i < e.children.length; i++) {
       let distX = [];
       let distY = [];
       if (typeof params.start === "string") {
@@ -283,7 +283,7 @@ export let dotsMovement = (params) => {
   if (typeof params.target.length == 'undefined') {
     loopThrough(params.target)
   } else {
-    for (let j = 0; j < params.target.length; j++){
+    for (let j = 0; j < params.target.length; j++) {
       loopThrough(params.target[j])
     }
   }
