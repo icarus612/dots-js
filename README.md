@@ -2,7 +2,7 @@
 
 Hello there! 👋 I'm dev.icarus, a full-stack developer with a passion for building scalable and efficient applications. This repository serves as a gateway to my diverse range of projects. Here's how you can explore them:
 
-## My Projects
+## My Other Projects
 
 Each of my projects has its own dedicated repository. You can browse them by visiting my [GitHub profile](https://github.com/icarus612), but here is the basic structure of active projects:
 
