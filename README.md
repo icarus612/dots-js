@@ -1,4 +1,4 @@
-### Built by: dev.icarus
+# Neural Networks
 
 Hello there! 👋 I'm dev.icarus, a full-stack developer with a passion for building scalable and efficient applications. This repository serves as a gateway to my diverse range of projects. Here's how you can explore them:
 
