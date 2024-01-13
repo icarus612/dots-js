@@ -34,4 +34,4 @@ Thank you for visiting, and happy coding!
 
 ---
 
-© 2024 Icarus612. All Rights Reserved.
+© 2024 dev.icarus - All Rights Reserved.
