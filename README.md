@@ -6,50 +6,52 @@ Hello there! 👋 I'm dev.icarus, a full-stack developer with a passion for buil
 
 Each of my projects has its own dedicated repository. You can browse them by visiting my [GitHub profile](https://github.com/icarus612, but here is the basic structure of active projects:
 
-[daedalus-mono](https://github.com/icarus612/daedalus-mono)
+```
+[Daedalus Mono](https://github.com/icarus612/daedalus-mono)
 |
 ├── apps
 │   ├── cli
-│   │   └── [tools-installer](https://github.com/icarus612/toolsInstaller-app-cli)
+│   │   └── [Tools Installer](https://github.com/icarus612/toolsInstaller-app-cli)
 │   ├── flask
-│   │   ├── [maze-runner](https://github.com/icarus612/mazeRunner-app-flask)
-│   │   ├── [pokedex](https://github.com/icarus612/pokedex-app-flask)
-│   │   └── [weather-forecast](https://github.com/icarus612/weatherFortcast-app-flask)
+│   │   ├── [Maze Runner](https://github.com/icarus612/mazeRunner-app-flask)
+│   │   ├── [Pokedex](https://github.com/icarus612/pokedex-app-flask)
+│   │   └── [Weather Forecast](https://github.com/icarus612/weatherFortcast-app-flask)
 │   ├── microservices
-│   │   └── [market-bots](https://github.com/icarus612/marketBots-app-microservice)
+│   │   └── [Market Bots](https://github.com/icarus612/marketBots-app-microservice)
 │   └── next
-│       └── [dev-icarus](https://github.com/icarus612/devIcarus-app-next)
+│       └── [Dev Icarus](https://github.com/icarus612/devIcarus-app-next)
 |
 └── libs
     ├── bash
-    │   └── [cli-tools](https://github.com/icarus612/cliTools-lib-SH)
+    │   └── [Cli Tools](https://github.com/icarus612/cliTools-lib-SH)
     ├── golang
-    │   ├── [crud-server](https://github.com/icarus612/crudServer-lib-GO)
-    │   └── [maze-runner](https://github.com/icarus612/mazeRunner-lib-GO)
+    │   ├── [Crud Server](https://github.com/icarus612/crudServer-lib-GO)
+    │   └── [Maze Runner](https://github.com/icarus612/mazeRunner-lib-GO)
     ├── javascript
     │   ├── node
-    │   │   ├── [build-scripts](https://github.com/icarus612/buildScripts-node-JS)
-    │   │   ├── [dots-anime](https://github.com/icarus612/dotsAnime-node-JS)
-    │   │   ├── [maze-runner](https://github.com/icarus612/mazeRunner-node-JS)
-    │   │   └── [web-crawlers](https://github.com/icarus612/webCrawlers-node-JS)
+    │   │   ├── [Build Scripts](https://github.com/icarus612/buildScripts-node-JS)
+    │   │   ├── [Dots Anime](https://github.com/icarus612/dotsAnime-node-JS)
+    │   │   ├── [Maze Runner](https://github.com/icarus612/mazeRunner-node-JS)
+    │   │   └── [Web Crawlers](https://github.com/icarus612/webCrawlers-node-JS)
     │   └── react
-    │       ├── [e-card](https://github.com/icarus612/eCard-react-JS)
-    │       ├── [labyrinth](https://github.com/icarus612/labyrinth-react-JS)
-    │       ├── [markdown-builder](https://github.com/icarus612/markdownBuilder-react-JS)
-    │       ├── [maze-runner](https://github.com/icarus612/mazeRunner-react-JS)
-    │       ├── [quest](https://github.com/icarus612/quest-react-JS)
-    │       └── [quote-builder](https://github.com/icarus612/quotebuilder-react-JS)
+    │       ├── [E Card](https://github.com/icarus612/eCard-react-JS)
+    │       ├── [Labyrinth](https://github.com/icarus612/labyrinth-react-JS)
+    │       ├── [Markdown Builder](https://github.com/icarus612/markdownBuilder-react-JS)
+    │       ├── [Maze Runner](https://github.com/icarus612/mazeRunner-react-JS)
+    │       ├── [Quest](https://github.com/icarus612/quest-react-JS)
+    │       └── [Quote Builder](https://github.com/icarus612/quotebuilder-react-JS)
     └── python
-        ├── [anki-build-tools](https://github.com/icarus612/ankiBuilTools-lib-PY)
-        ├── [cli-tools](https://github.com/icarus612/cliTools-lib-PY)
-        ├── [maze-runner](https://github.com/icarus612/mazeRunner-lib-PY)
+        ├── [Anki Build Tools](https://github.com/icarus612/ankiBuilTools-lib-PY)
+        ├── [Cli Tools](https://github.com/icarus612/cliTools-lib-PY)
+        ├── [Maze Runner](https://github.com/icarus612/mazeRunner-lib-PY)
         ├── neural-networks
-        │   ├── [abstract-base-classes](https://github.com/icarus612/abc-ANN-PY)
-        │   ├── [digit-recognition](https://github.com/icarus612/digitRecognition-ANN-PY)
-        │   ├── [market-analyzer](https://github.com/icarus612/marketAnalyzer-ANN-PY)
-        │   └── [open-ai-gym](https://github.com/icarus612/openAIGym-ANN-PY)
-        ├── [pyto-widgets](https://github.com/icarus612/pytoWidgets-lib-PY)
-        └── [web-crawlers](https://github.com/icarus612/webCrawlers-lib-PY)
+        │   ├── [Abstract Base Classes](https://github.com/icarus612/abc-ANN-PY)
+        │   ├── [Digit Recognition](https://github.com/icarus612/digitRecognition-ANN-PY)
+        │   ├── [Market Analyzer](https://github.com/icarus612/marketAnalyzer-ANN-PY)
+        │   └── [Open Ai Gym](https://github.com/icarus612/openAIGym-ANN-PY)
+        ├── [Pyto Widgets](https://github.com/icarus612/pytoWidgets-lib-PY)
+        └── [Web Crawlers](https://github.com/icarus612/webCrawlers-lib-PY)
+```
 
 - **Project Overviews**: In each repository, you'll find a detailed README explaining the project's purpose, technology stack, and how to get it up and running.
 
