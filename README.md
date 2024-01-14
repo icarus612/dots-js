@@ -22,9 +22,9 @@ Each of my projects has its own dedicated repository. You can browse them by vis
 │       └── <a href="https://github.com/icarus612/devIcarus-app-next">Dev Icarus</a>
 └── Libraries
     ├── Bash
-    │   └── <a href="https://github.com/icarus612/cliTools-lib-SH">Cli Tools</a>
+    │   └── <a href="https://github.com/icarus612/cliTools-lib-SH">CLI Tools</a>
     ├── Golang
-    │   ├── <a href="https://github.com/icarus612/crudServer-lib-GO">Crud Server</a>
+    │   ├── <a href="https://github.com/icarus612/crudServer-lib-GO">CRUD Server</a>
     │   └── <a href="https://github.com/icarus612/mazeRunner-lib-GO">Maze Runner</a>
     ├── JavaScript
     │   ├── Node
@@ -33,7 +33,7 @@ Each of my projects has its own dedicated repository. You can browse them by vis
     │   │   ├── <a href="https://github.com/icarus612/mazeRunner-node-JS">Maze Runner</a>
     │   │   └── <a href="https://github.com/icarus612/webCrawlers-node-JS">Web Crawlers</a>
     │   └── React
-    │       ├── <a href="https://github.com/icarus612/eCard-react-JS">E Card</a>
+    │       ├── <a href="https://github.com/icarus612/eCard-react-JS">e-Card</a>
     │       ├── <a href="https://github.com/icarus612/labyrinth-react-JS">Labyrinth</a>
     │       ├── <a href="https://github.com/icarus612/markdownBuilder-react-JS">Markdown Builder</a>
     │       ├── <a href="https://github.com/icarus612/mazeRunner-react-JS">Maze Runner</a>
@@ -41,13 +41,13 @@ Each of my projects has its own dedicated repository. You can browse them by vis
     │       └── <a href="https://github.com/icarus612/quotebuilder-react-JS">Quote Builder</a>
     └── Python
         ├── <a href="https://github.com/icarus612/ankiBuilTools-lib-PY">Anki Build Tools</a>
-        ├── <a href="https://github.com/icarus612/cliTools-lib-PY">Cli Tools</a>
+        ├── <a href="https://github.com/icarus612/cliTools-lib-PY">CLI Tools</a>
         ├── <a href="https://github.com/icarus612/mazeRunner-lib-PY">Maze Runner</a>
         ├── Neural Networks
         │   ├── <a href="https://github.com/icarus612/abc-ANN-PY">Abstract Base Classes</a>
         │   ├── <a href="https://github.com/icarus612/digitRecognition-ANN-PY">Digit Recognition</a>
         │   ├── <a href="https://github.com/icarus612/marketAnalyzer-ANN-PY">Market Analyzer</a>
-        │   └── <a href="https://github.com/icarus612/openAIGym-ANN-PY">Open Ai Gym</a>
+        │   └── <a href="https://github.com/icarus612/openAIGym-ANN-PY">Open AI Gym</a>
         ├── <a href="https://github.com/icarus612/pytoWidgets-lib-PY">Pyto Widgets</a>
         └── <a href="https://github.com/icarus612/webCrawlers-lib-PY">Web Crawlers</a>
 </pre>
