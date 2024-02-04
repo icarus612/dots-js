@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2020 Ellis Bell Hogan
+Copyright (c) 2024 Ellis Bell Hogan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

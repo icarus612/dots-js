@@ -2,12 +2,4 @@ node_modules/
 
 *.git
 
-.DS_Store
-
-
-
-
-
-
- 
-BUILD
+.DS_StoreBUILD
