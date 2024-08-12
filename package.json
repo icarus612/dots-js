@@ -1,22 +1,19 @@
 {
-  "name": "dots",
+  "name": "dots-js",
   "version": "1.0.0",
-  "description": "Feel free to use it and change it how you like - Dots operates under MIT licence.",
-  "main": "src/dots.js",
+  "description": "Animation library for creating dot paths",
+  "main": "src/dots.mjs",
   "directories": {
     "example": "example"
   },
   "dependencies": {
-    "animejs": "^3.2.1"
+    "animejs": "^3.2.2"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/icarus612/dots-node-JS.git"
+    "url": "git+https://github.com/icarus612/dots-js.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
