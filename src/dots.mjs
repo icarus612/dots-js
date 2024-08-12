@@ -2,7 +2,7 @@ import anime from 'animejs';
 
 const createDelay = (target, time) =>  3.5 * time / target.children.length * n;
 
-const where = (e) => (e[1] + e[0]) / 2;
+const split = (e) => (e[1] + e[0]) / 2;
 
 const findTarget = (po, el) => {
   let start = document.querySelector(po).getBoundingClientRect()
@@ -12,14 +12,29 @@ const findTarget = (po, el) => {
   return [x, y]
 }
 
-const translateY = (mv, t, crv) => {
-
-}
-
-
-const translateX = (mv, t, crv) => {
+const translateX = ({location, time, curve, axis="x"}) => {
+	let translation = {
+		value: location,
+		duration: time,
+	}
 	
 }
+
+const translateY = ({location, time, curve, axis="x"}) => {
+	let translation = {
+		value: location,
+		duration: time,
+		easing: "linear",
+	}
+
+	switch (curve) {
+		"linear":
+			return translation
+
+	}
+}
+
+
 
 const fillColor = ({target, time, svg}) => {
   let el = svg.children
@@ -52,7 +67,7 @@ const fillColor = ({target, time, svg}) => {
 
 const animate = (e, t, svg, mvX, mvY, crv, clr, d) => {
 
-  let animate = anime.timeline({
+  let animation = anime.timeline({
 
   }).add({
     targets: svg.children[e],
@@ -70,7 +85,7 @@ const animate = (e, t, svg, mvX, mvY, crv, clr, d) => {
     },
   }, d);
 
-  return animate
+  return animation;
 
 }
 
